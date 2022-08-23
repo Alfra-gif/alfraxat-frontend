@@ -1,0 +1,42 @@
+<div class="login">
+    <h1 class="title">Create an account</h1>
+    <form #form_post="ngForm" method="POST" (ngSubmit)="onSubmit()">
+
+        <label for="email" class="form-text">EMAIL</label><br>
+        <input class="camp" type="text" name="email" #email="ngModel" [(ngModel)]="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+        <span class="error" *ngIf="email.touched && !email.valid">
+            <ul>EMAIL
+                <li>Cannot be empty</li>
+                <li>Make sure the address is correct</li>
+            </ul>
+        </span><br>
+
+        <label for="username" class="form-text">USERNAME</label><br>
+        <input class="camp" type="text" name="username" #username="ngModel" [(ngModel)]="user.username" pattern="^[\w_]{0,12}$" required><br>
+        <span class="error" *ngIf="username.touched && !username.valid">
+            <ul>USERNAME
+                <li>Cannot be empty</li>
+                <li>Maximum twelve characters</li>
+                <li>Only letters, numbers and _ are allowed</li>
+            </ul>
+        </span><br>
+
+        <label for="password" class="form-text">PASSWORD</label><br>
+        <input class="camp" type="password" name="password" #password="ngModel" [(ngModel)]="user.password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required ><br>
+        <span class="error" *ngIf="password.touched && !password.valid">
+            <ul>PASSWORD
+                <li>Cannot be empty</li>
+                <li>Minimum eight characters</li>
+                <li>At least one uppercase letter</li>
+                <li>At least one lowercase letter</li>
+                <li>At least one number</li>
+                <li>At least one special character</li>
+            </ul>
+        </span><br>
+
+        <input class="send" type="submit" value="register" [disabled]="!form_post.form.valid">
+        {{missatge}}
+    </form><br>
+    <a [routerLink]="['']">Already have an account?</a>
+
+</div>

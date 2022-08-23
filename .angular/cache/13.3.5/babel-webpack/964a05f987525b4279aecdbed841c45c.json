@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Chat {\n  constructor(_id, messages, users_array, date = new Date()) {\n    this._id = _id;\n    this.messages = messages;\n    this.users_array = users_array;\n    this.date = date;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,23 @@
+<div class="login">
+    <h1 class="title">Welcome back!</h1>
+    <form #form_post="ngForm" method="POST" (ngSubmit)="onSubmit()">
+
+        <label for="email" class="form-text">EMAIL</label><br>
+        <input class="camp" type="text" name="email" #email="ngModel" [(ngModel)]="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+        <span class="error" *ngIf="email.touched && !email.valid">
+            <ul>EMAIL
+                <li>Cannot be empty</li>
+                <li>Make sure the address is correct</li>
+            </ul>
+        </span><br>
+
+        <label for="password" class="form-text">PASSWORD</label><br>
+        <input class="camp" type="password" name="password" #password="ngModel" [(ngModel)]="user.password" required><br>
+        <span class="error" *ngIf="password.touched && !password.valid">es obligatori!<br></span>
+
+        <br><input class="send" type="submit" value="log in" [disabled]="!form_post.form.valid">
+        {{missatge}}
+    </form>
+    <p>Need an account? <a [routerLink]="['register']">Register now!</a></p>
+
+</div>

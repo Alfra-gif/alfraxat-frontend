@@ -1,0 +1,39 @@
+<app-server-list></app-server-list>
+
+<div class="config-box">
+    
+    <div class="upper-chat">
+        <p class="inner-upper-chat">Edit your account</p>
+    </div>
+
+    <div class="config-form">
+        <form #form_post="ngForm" method="POST" (ngSubmit)="onSubmit()">
+
+            <label for="email" class="form-text">EMAIL</label><br>
+            <input class="camp" type="text" name="email" #email="ngModel" [(ngModel)]="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+            <span class="error" *ngIf="!email.valid">
+                <ul>EMAIL
+                    <li>Cannot be empty</li>
+                    <li>Make sure the address is correct</li>
+                </ul>
+            </span><br>
+    
+            <label for="username" class="form-text">USERNAME</label><br>
+            <input class="camp" type="text" name="username" #username="ngModel" [(ngModel)]="user.username" pattern="^[\w_]{0,12}$" required><br>
+            <span class="error" *ngIf="!username.valid">
+                <ul>USERNAME
+                    <li>Cannot be empty</li>
+                    <li>Maximum twelve characters</li>
+                    <li>Only letters, numbers and _ are allowed</li>
+                </ul>
+            </span><br>
+
+            <label for="image" class="form-text" >PROFILE IMAGE</label><br>
+            <input type="file" accept=".jpg, .png, .jpeg, .gif/*" name="image" #image="ngModel" [(ngModel)]="user.image" required (change)="fileChangeEvent($event)"><br><br><br>
+        
+            <input class="send" type="submit" value="save">
+            {{missatge}}
+        </form><br>
+    
+    </div>
+</div>

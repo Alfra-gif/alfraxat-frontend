@@ -1,0 +1,48 @@
+
+<div class="friends">
+    <div class="inner-friends">
+        <div class="my-user">
+            <div *ngIf="user.image !=null; else notShow">
+                <img class="my-user-image" src="{{url+'get-image/'+user.image}}" *ngIf="user.image !='null'"/>
+            </div>
+            <ng-template #notShow>
+                <img class="my-user-image" src="{{url+'get-image/fons_sapo.png'}}"/>
+            </ng-template>
+            <div>
+                <p class="my-user-text"><span class="tag">@</span>{{token.username}}</p>
+            </div>
+        </div>
+        <div *ngFor="let friend of friends_array">
+            <div *ngIf="friend._id == id">
+                <div class="selected-friend" type="submit">
+                    <div>
+                        <div *ngIf="friend.image !=null; else notShow">
+                            <img class="image" src="{{url+'get-image/'+friend.image}}"/>
+                        </div>
+                        <ng-template #notShow>
+                            <img class="image" src="{{url+'get-image/fons_sapo.png'}}"/>
+                        </ng-template>
+                    </div>
+                    <div>
+                        <p class="friend-name">{{ friend.username }}</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="friend._id != id">
+                <div class="friend" type="submit" (click)="route_xat(friend._id)">
+                    <div>
+                        <div *ngIf="friend.image !=null; else notShow">
+                            <img class="image" src="{{url+'get-image/'+friend.image}}"/>
+                        </div>
+                        <ng-template #notShow>
+                            <img class="image" src="{{url+'get-image/fons_sapo.png'}}"/>
+                        </ng-template>
+                    </div>
+                    <div>
+                        <p class="friend-name">{{ friend.username }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
