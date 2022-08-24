@@ -1,3 +1,21 @@
+# Important things to know:
+
+- This is a simple web messaging app, like Whatsapp but with a kinda Discord design.
+- I didn't use Bootstrap, it's all pure CSS.
+- It has a register-login system.
+- It has a working middleware.
+- It uses a cookie to store and use the user information.
+- It has a friend-request system like Discord.
+- It has a working friend to friend chat.
+- If a user sends a link, you can click it and it will open in a new tab.
+- There's a default profile picture.
+- You can change your profile picture.
+- You can change your username.
+- Every user has the option to delete a whole chat without asking the other user.
+- All data sent to the Backend is encrypted.
+
+- If you want to try it, you must set both local IPs on the frontend and backend.
+
 # PrAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
