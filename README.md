@@ -16,6 +16,10 @@
 
 - If you want to try it, you must set both local IPs on the frontend and backend.
 
+# Database:
+
+[Database collections.zip](https://github.com/Alfra-gif/alfraxat-frontend/files/9418207/Database.collections.zip)
+
 # PrAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
