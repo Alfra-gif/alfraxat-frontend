@@ -1,12 +1,12 @@
 # Important things to know:
 
-- This is a simple web messaging app, like Whatsapp but with a kinda Discord design.
+- This is a web messaging app, like Whatsapp but with a kinda Discord design.
 - I didn't use Bootstrap, it's all pure CSS.
 - It has a register-login system.
 - It has a working middleware.
 - It uses a cookie to store and use the user information.
 - It has a friend-request system like Discord.
-- It has a working friend to friend chat.
+- It has a working friend to friend real time chat.
 - If a user sends a link, you can click it and it will open in a new tab.
 - There's a default profile picture.
 - You can change your profile picture.
