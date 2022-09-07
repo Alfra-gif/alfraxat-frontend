@@ -16,10 +16,6 @@
 
 - If you want to try it, you must set both local IPs on the frontend and backend.
 
-# Database:
-
-[Database collections.zip](https://github.com/Alfra-gif/alfraxat-frontend/files/9418207/Database.collections.zip)
-
 # Documentation:
 
 [Documents (catalan).zip](https://github.com/Alfra-gif/alfraxat-frontend/files/9508531/Documents.catalan.zip)
