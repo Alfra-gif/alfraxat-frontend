@@ -11,7 +11,7 @@
 - There's a default profile picture.
 - You can change your profile picture.
 - You can change your username.
-- Every user has the option to delete a whole chat without asking the other user.
+- Every user has the option to delete a whole chat without asking the other user. (extreme privacy)
 - All data sent to the Backend is encrypted.
 
 - If you want to try it, you must set both local IPs on the frontend and backend.
