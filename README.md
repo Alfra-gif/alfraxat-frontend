@@ -20,6 +20,10 @@
 
 [Database collections.zip](https://github.com/Alfra-gif/alfraxat-frontend/files/9418207/Database.collections.zip)
 
+# Documentation:
+
+[Documents (catalan).zip](https://github.com/Alfra-gif/alfraxat-frontend/files/9508531/Documents.catalan.zip)
+
 # PrAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
