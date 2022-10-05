@@ -1,5 +1,3 @@
-## alfraxat-frontend
-
 # Important things to know:
 
 - This is a web messaging app, like Whatsapp but with a kinda Discord design.
